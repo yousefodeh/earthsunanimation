@@ -1,0 +1,157 @@
+html, body {
+  width: 100%;
+  height: 100vh;
+  overflow:hidden;
+    background-color: black;
+}
+
+#sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 200px;
+  width: 200px;
+  margin-top: -100px; 
+  margin-left: -100px;
+  border-color: orange;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 50%;
+  box-shadow: 0 0 128px red;
+  background: url(sun.png) no-repeat;
+  background-size: cover;
+}
+
+#earth {
+  position: absolute;
+  top: 0;
+  left: 50%;  
+  height: 50px;
+  width: 50px;
+  margin-left: -25px;
+  margin-top: -25px;
+  border-color: blue;
+  border-width: 0px;
+  border-style: solid;
+  border-radius: 50%;
+  background: url(earth.png) no-repeat;
+  background-size: cover;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.5);
+-moz-box-shadow:    0px 0px 20px 0px rgba(255, 255, 255, 0.5);
+box-shadow:         0px 0px 20px 0px rgba(255, 255, 255, 0.5);
+
+}
+#earth-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 650px;
+  height: 500px;
+  margin-top: -250px;
+  margin-left: -250px;
+  border-width: 0px;
+  border-style: dotted;
+  border-color: white;
+  border-radius: 50%; 
+  -webkit-animation: spin-right 10s linear infinite;
+   -moz-animation: spin-right 10s linear infinite;
+    -ms-animation: spin-right 10s linear infinite;
+     -o-animation: spin-right 10s linear infinite;
+        animation: spin-right 10s linear infinite;
+}
+
+#moon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 25px;
+  width: 25px;
+  margin-left: -25px;
+  margin-top: -25px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  background: url(moon.png) no-repeat;
+  background-size: cover;
+  -webkit-box-shadow: 1px 1px 16px 0px rgba(255, 255, 255, .6);
+-moz-box-shadow:    1px 1px 16px 0px rgba(255, 255, 255, .6);
+box-shadow:         1px 1px 16px 0px rgba(255, 255, 255, .6);
+}
+
+#moon-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 110px;
+  height: 80px;
+  margin-top: -285px;
+  margin-left: -45px;
+  border-width: 0px;
+  border-style: dotted;
+  border-color: white;
+  border-radius: 50%;
+  -webkit-animation: spin-right 10s linear infinite;
+   -moz-animation: spin-right 10s linear infinite;
+    -ms-animation: spin-right 10s linear infinite;
+     -o-animation: spin-right 10s linear infinite;
+        animation: spin-right 10s linear infinite;
+}
+
+@-webkit-keyframes spin-right {
+100% {
+  -webkit-transform: rotate(360deg);
+     -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+       -o-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+}
+
+@keyframes spin-right {
+100% {
+  -webkit-transform: rotate(360deg);
+     -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+       -o-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+}
+
+.stars {
+background-color: black;
+width: 100%;
+height: 100%;
+display: block;
+}
+.star {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background-color: white;
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  -webkit-shadow: 0 0 8px 2px rgba(255,255,255,0.6);
+  -moz-shadow: 0 0 8px 2px rgba(255,255,255,0.6);
+  box-shadow: 0 0 8px 2px rgba(255,255,255,0.6);
+  animation: star 4s infinite;
+  -webkit-animation: star 4s infinite; 
+}
+
+@keyframes star
+{
+0% {opacity: 0.2;}
+50% {opacity: 1;}
+100% {opacity: 0.2;}
+}
+
+@-webkit-keyframes star
+{
+0% {opacity: 0.2;}
+50% {opacity: 1;}
+100% {opacity: 0.2;}
+}
